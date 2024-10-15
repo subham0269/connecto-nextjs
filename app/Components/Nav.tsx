@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, type FC } from "react";
+import { useCallback, useEffect, useState, type FC } from "react";
 import Link from "next/link";
 import logo from '@/public/Images/logo.svg'
 import searchIcon from '@/public/Images/search-icon.svg'
@@ -13,7 +13,7 @@ const Navbar : FC = () => {
     const [isVisible, setVisible] = useState(true);
     const [lastScrollY, setScrollY] = useState(0);
 
-    const handleScroll = () => {
+    const handleScroll = useCallback (() => {
         const currentScrollY = window.scrollY;
         if (currentScrollY > lastScrollY) {
             setVisible(false);
@@ -21,14 +21,14 @@ const Navbar : FC = () => {
             setVisible(true);
         }
         setScrollY(currentScrollY);
-    };
+    }, [lastScrollY]);
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
-    }, [lastScrollY]);
+    }, [handleScroll]);
 
 
     const handleModal = () => {
