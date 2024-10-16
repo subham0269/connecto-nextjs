@@ -7,11 +7,17 @@ import searchIcon from '@/public/Images/search-icon.svg'
 import downArrow from '@/public/Images/down-arrow.svg';
 import Image from "next/image";
 import Button from "./Base/PrimaryBtn";
+import Modal from "./Modal/Modal";
+import UserAuth from "./auth/UserAuth";
 
 const Navbar : FC = () => {
 
     const [isVisible, setVisible] = useState(true);
     const [lastScrollY, setScrollY] = useState(0);
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const handleModal = () => setModalOpen(true);
+    const closeModal = () => setModalOpen(false);
 
     const handleScroll = useCallback (() => {
         const currentScrollY = window.scrollY;
@@ -30,11 +36,15 @@ const Navbar : FC = () => {
         };
     }, [handleScroll]);
 
+    // Disable scrolling on modal open
 
-    const handleModal = () => {
-        console.log('button clicked');
-        
-    };
+    useEffect(() => {
+        if (modalOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "auto";
+        }
+    }, [modalOpen])
     
     return (
         <nav className={`bg-white sticky top-0 z-40 w-full mb-8 transition-all delay-100 duration-100 ease-in-out ${!isVisible ? 'drop-shadow-md' : 'drop-shadow-none'}`}>
@@ -58,6 +68,11 @@ const Navbar : FC = () => {
                   <Link href={''} className="hover:underline py-1">Become an Organizer</Link>
                </div>
             </div>
+
+            {/* Modal component */}
+            <Modal isOpen={modalOpen} onClose={closeModal}>
+                <UserAuth />
+            </Modal>
          </nav>
     )
 }
