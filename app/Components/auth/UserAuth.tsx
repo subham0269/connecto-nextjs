@@ -69,4 +69,4 @@ const UserAuth : FC = () => {
     )
 }
 
-    export default UserAuth;
+export default UserAuth;

@@ -9,12 +9,13 @@ import Image from "next/image";
 import Button from "./Base/PrimaryBtn";
 import Modal from "./Modal/Modal";
 import UserAuth from "./auth/UserAuth";
+import { usePathname } from "next/navigation";
 
 const Navbar : FC = () => {
-
     const [isVisible, setVisible] = useState(true);
     const [lastScrollY, setScrollY] = useState(0);
     const [modalOpen, setModalOpen] = useState(false);
+    const currentPath = usePathname();
 
     const handleModal = () => setModalOpen(true);
     const closeModal = () => setModalOpen(false);
@@ -44,7 +45,9 @@ const Navbar : FC = () => {
         } else {
             document.body.style.overflow = "auto";
         }
-    }, [modalOpen])
+    }, [modalOpen]);
+
+    if(currentPath === '/dashboard') return null; //Returning null if the dashboard route is active
     
     return (
         <nav className={`bg-white sticky top-0 z-40 w-full mb-8 transition-all delay-100 duration-100 ease-in-out ${!isVisible ? 'drop-shadow-md' : 'drop-shadow-none'}`}>
