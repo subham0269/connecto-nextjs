@@ -113,11 +113,11 @@ const Socials = ({list}: {list:FooterSocialsProps[]}) => {
     return (
         <ul className="flex justify-center items-center space-x-6">
             {list.map((a:FooterSocialsProps,i) => 
-                <li key={i}>
-                    <a href={a.url} target="_blank">
-                        <Image src={a.img} loading ='lazy' alt={`${a.title}-icon`} />
-                    </a>
-                </li>)
+               <li key={i}>
+                  <a href={a.url} target="_blank">
+                     <Image src={a.img} loading ='lazy' alt={`${a.title}-icon`} />
+                  </a>
+               </li>)
             }
         </ul>
     )
