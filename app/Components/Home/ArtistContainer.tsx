@@ -9,7 +9,7 @@ const ArtistContainer:FC = () => {
     
     return (
         <div>
-            <SubSectionHeading url="/artists" imgURL={mic} heading="Artists" />
+            <SubSectionHeading url="/artists" imgURL={mic} heading="Top Artists" />
             <ArtistList />
         </div>
     )

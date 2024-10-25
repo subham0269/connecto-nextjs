@@ -33,3 +33,30 @@ export const artistTestList:AtomicCard[] = [
       name: 'Lil Peep'
     }
 ]
+
+export const eventsTestList:AtomicCard[] = [
+  {
+    imgURL: eminem,
+    name: 'Eminem'
+  },
+  {
+    imgURL: taylor,
+    name: 'Taylor Swift'
+  },
+  {
+    imgURL: ff,
+    name: '44 Phantom'
+  },
+  {
+    imgURL: mgk,
+    name: 'Machine Gun Kelly'
+  },
+  {
+    imgURL: kanye,
+    name: 'Kanye West'
+  },
+  {
+    imgURL: lil,
+    name: 'Lil Peep'
+  }
+]
