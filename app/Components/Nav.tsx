@@ -6,7 +6,7 @@ import logo from '@/public/Images/logo.svg'
 import searchIcon from '@/public/Images/search-icon.svg'
 import downArrow from '@/public/Images/down-arrow.svg';
 import Image from "next/image";
-import Button from "./base/PrimaryBtn";
+import Button from "./Base/PrimaryBtn";
 import Modal from "./Modal/Modal";
 import UserAuth from "./auth/UserAuth";
 import { usePathname } from "next/navigation";

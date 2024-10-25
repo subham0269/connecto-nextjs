@@ -1,7 +1,8 @@
 import type { FC } from "react"
-import SubSectionHeading from "../base/HomeSubSection";
+
 import mic from '@/public/Images/Home/mic.svg';
 import ArtistList from "./ArtistList";
+import SubSectionHeading from "../Base/HomeSubSection";
 
 const ArtistContainer:FC = () => {
     
