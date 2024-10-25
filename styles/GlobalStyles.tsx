@@ -3,7 +3,7 @@ import type { FC } from "react";
 
 const GlobalStyles:FC<global> = ({children}) => {
     return (
-        <div className="max-w-[600px] px-10 space-y-12">
+        <div className="max-w-[1260px] p-12 mx-auto">
             {children}
         </div>
     )

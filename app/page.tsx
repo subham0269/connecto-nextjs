@@ -8,9 +8,10 @@ import ArtistContainer from "./Components/Home/ArtistContainer";
 export default function Home() {
   return (
     <>
-      <GlobalStyles>
+      <div className="max-w-[1260px] px-12 mx-auto">
         <ArtistContainer />
-      </GlobalStyles>
+      </div>
+      {/* </GlobalStyles> */}
     </>
   );
 }
