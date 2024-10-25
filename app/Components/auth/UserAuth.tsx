@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, type FC } from "react";
+import { ChangeEvent, useState, type FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import google from '@/public/Images/google.svg';
@@ -12,7 +12,7 @@ const UserAuth : FC = () => {
     const [email, setEmail] = useState('');
     const [tel, setTel] = useState('');
 
-    const onInputChange = (e) => {
+    const onInputChange = (e:ChangeEvent<HTMLInputElement>) => {
         if (e.target.value == 'tel') {
             setTel(e.target.value);
         } else {
@@ -20,7 +20,7 @@ const UserAuth : FC = () => {
         }
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e:ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
         console.log(email, tel);
         
