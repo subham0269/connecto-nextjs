@@ -4,7 +4,7 @@ import type { FC } from "react"
 import EventCard from "./EventCard";
 import Link from "next/link";
 
-const EventsList:FC = () => {
+const SquareList:FC = () => {
     return (
         <div className="flex flex-col md:flex-row space-y-6 space-x-0 md:space-x-10 md:space-y-0 items-start md:justify-center">
             {eventsTestList.map((d:AtomicCard, i:number) => 
@@ -16,4 +16,4 @@ const EventsList:FC = () => {
     )
 }
 
-export default EventsList;
+export default SquareList;

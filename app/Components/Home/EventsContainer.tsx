@@ -5,8 +5,8 @@ import forward from '@/public/Images/Home/forward.svg';
 
 const EventsContainer:FC = () => {
     return (
-        <div>
-            <SubSectionHeading url="/artists" imgURL={forward} heading="Top Artists" />
+        <div className="space-y-4">
+            <SubSectionHeading url="/artists" imgURL={forward} heading="Best Parties in Your City" />
             <EventsList />
         </div>
     )
