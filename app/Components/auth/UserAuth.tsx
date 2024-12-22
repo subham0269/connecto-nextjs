@@ -31,7 +31,7 @@ const UserAuth : FC = () => {
             <p className="text-center text-2xl selection-none font-medium">Get Started</p>
             <div className="mt-8 space-y-7">
                 <div className="space-y-5">
-                    <Link href='/' className="border-[2px] border-[#7F7F7F] hover:border-[#5A52FF] transition duration-200 ease-in-out flex items-center p-2 rounded-md">
+                    <Link href='/' className="border-[2px] border-[#7F7F7F] hover:border-primary transition duration-200 ease-in-out flex items-center p-2 rounded-md">
                         <Image src={google} width={18} height={18} className="" alt="google-logo" aria-hidden />
                         <div className="grow text-center text-sm md:text-md">Continue with Google</div>
                     </Link>
