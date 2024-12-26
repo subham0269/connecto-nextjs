@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "./Components/Nav";
-import Footer from "./Components/Footer";
+import Navbar from "./UI/Nav";
+import Footer from "./UI/Footer";
 
 const overusedGrotesk = localFont({
   src: "../public/fonts/OverusedGroteskVF.woff",
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${overusedGrotesk.variable} antialiased`}
+        className={`${overusedGrotesk.variable} antialiased `}
       >
         <Navbar />
         {children}

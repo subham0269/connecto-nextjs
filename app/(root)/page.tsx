@@ -1,9 +1,9 @@
 // import GlobalStyles from "@/styles/GlobalStyles";
 import { FC } from "react";
-import ArtistContainer from "../Components/Home/CircleContainer";
-import EventsContainer from "../Components/Home/EventsContainer";
-import OrgContainer from "../Components/Home/OrgContainer";
-import NewsLetterJoin from "../Components/Home/Newsletter";
+import ArtistContainer from "../UI/Home/CircleContainer";
+import EventsContainer from "../UI/Home/EventsContainer";
+import OrgContainer from "../UI/Home/OrgContainer";
+import NewsLetterJoin from "../UI/Home/Newsletter";
 
 // import Navbar from "./Components/Nav";
 
