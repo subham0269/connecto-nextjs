@@ -113,8 +113,8 @@ const Newsletter = () => {
 }
 
 const Socials = ({list}: {list:FooterSocialsProps[]}) => {
-    return (
-        <ul className="flex justify-center items-center space-x-6">
+   return (
+      <ul className="flex justify-center items-center space-x-6">
             {list.map((a:FooterSocialsProps,i) => 
                <li key={i}>
                   <a href={a.url} target="_blank">
@@ -122,14 +122,12 @@ const Socials = ({list}: {list:FooterSocialsProps[]}) => {
                   </a>
                </li>)
             }
-        </ul>
-    )
+      </ul>
+   )
 }
 
 const Footer : FC = () => {
-   const isHomeRoute = usePathname().startsWith("/");
-   console.log(isHomeRoute);
-   
+   const isHomeRoute = usePathname().startsWith("/");   
 
    return (
       <div className="bg-black py-7 px-2 sm:px-20 max-w-full pt-20 mt-12 space-y-9 text-white">

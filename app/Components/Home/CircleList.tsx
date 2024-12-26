@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { FC } from "react"
 import ArtistCard from "./ArtistCard";
 import { AtomicCard } from "@/app/Interfaces/components/Home";
-import { getTopArtists, wait } from "@/app/db/GET";
+import { getTopArtists, wait } from "@/app/utils/GET";
 // import { getTopArtists } from "@/db/GET";
 
 const CircleList:FC = async () => {
