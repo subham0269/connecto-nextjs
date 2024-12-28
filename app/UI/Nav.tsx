@@ -76,7 +76,7 @@ const Navbar : FC = () => {
             <Modal isOpen={modalOpen} onClose={closeModal}>
                 <UserAuth />
             </Modal>
-         </nav>
+        </nav>
     )
 }
 

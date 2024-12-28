@@ -6,12 +6,12 @@ export default function HeroCard  ({...props}) {
     const {eventTitle, section, genre, duration, date, location, startingPrice} = props;
     return (
         <>
-            <div className="max-w-screen-lg mx-2 md:mx-auto rounded-md py-6 px-4 sm:p-8 shadow-secondaryShadow">
-                <div className="w-full h-full sm:h-[390px] md:h-[450px] overflow-hidden rounded-lg justify-center items-center">
-                    <Image quality={100} className="w-full h-auto drop-shadow-md object-center" src={poster} loading="lazy" alt="Foreground Poster"/>
+            <div className="max-w-screen-lg md:mx-auto rounded-md py-6 px-4 sm:p-8 shadow-secondaryShadow">
+                <div className="w-full h-72 sm:h-[390px] md:h-[450px] overflow-hidden rounded-lg justify-center items-center relative">
+                    <Image quality={100} className="absolute inset-0 w-full h-full object-cover drop-shadow-md object-center" src={poster} loading="lazy" alt="Foreground Poster"/>
                 </div>
                 <div className=" divide-y-2 divide-[#00000033] space-y-3 mt-7">
-                <div className=" flex sm:flex-row flex-col items-start sm:items-center justify-between space-y-4 sm:space-y-0">
+                <div className=" flex flex-row items-start sm:items-center justify-between space-y-4 sm:space-y-0">
                     <div className="space-y-4">
                         <p className="text-2xl md:text-4xl text-[#000000CC] font-bold">{eventTitle}</p>
                         <div className="flex items-center justify-center divide-x-2 divide-[#000000A1] text-[#000000A1]">

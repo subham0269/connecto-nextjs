@@ -11,8 +11,8 @@ const Artist = () => {
         <div className="flex items-center justify-start space-x-4">
             <img src="./images/artists/taylor.png" className="size-24" loading="lazy" alt="artist-img" />
             <span className="text-[#000000BF] text-xl font-semibold">Taylor Swift</span>
-            </div>
-            <ul className="space-y-3">
+        </div>
+        <ul className="space-y-3">
             <li>
                 <Link href="/" className="flex items-center justify-start space-x-2 group">
                     <Image quality={100} src={instaICON} loading="lazy" alt="Instagram-logo" />
@@ -33,6 +33,6 @@ const Artist = () => {
             </li>
         </ul>
     </>
-)
+    )
 }
 export default Artist;

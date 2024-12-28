@@ -127,7 +127,7 @@ const Socials = ({list}: {list:FooterSocialsProps[]}) => {
 }
 
 const Footer : FC = () => {
-   const isHomeRoute = usePathname().startsWith("/");   
+   const isHomeRoute = usePathname() === '/'? true : false;   
 
    return (
       <div className="bg-black py-7 px-2 sm:px-20 max-w-full pt-20 mt-12 space-y-9 text-white">
